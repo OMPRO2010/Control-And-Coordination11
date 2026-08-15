@@ -1,174 +1,185 @@
-/* =====================================================
-   NEUROX — CONTROL & COORDINATION QUIZ
-===================================================== */
-
 const questions = [
+
     {
         question: "What is the structural and functional unit of the nervous system?",
-        answers: [
-            "Neuron",
-            "Hormone",
-            "Brain",
-            "Spinal cord"
-        ],
-        correct: 0
-    },
-
-    {
-        question: "Which part of a neuron receives signals?",
-        answers: [
-            "Axon",
-            "Dendrites",
-            "Cell body",
-            "Nerve ending"
-        ],
+        answers: ["Hormone", "Neuron", "Brain", "Spinal cord"],
         correct: 1
     },
 
     {
-        question: "Which organ acts as the main coordinating centre of the nervous system?",
-        answers: [
-            "Heart",
-            "Liver",
-            "Brain",
-            "Kidney"
-        ],
+        question: "Which part of the brain controls thinking and memory?",
+        answers: ["Cerebellum", "Medulla", "Cerebrum", "Spinal cord"],
         correct: 2
     },
 
     {
-        question: "A reflex action is generally:",
+        question: "Which part of the brain maintains balance and posture?",
+        answers: ["Cerebrum", "Cerebellum", "Medulla", "Hypothalamus"],
+        correct: 1
+    },
+
+    {
+        question: "Which part of the brain controls involuntary actions?",
+        answers: ["Cerebrum", "Cerebellum", "Medulla", "Neuron"],
+        correct: 2
+    },
+
+    {
+        question: "What detects a stimulus?",
+        answers: ["Receptor", "Effector", "Hormone", "Axon"],
+        correct: 0
+    },
+
+    {
+        question: "Which part of a neuron receives information?",
+        answers: ["Axon", "Dendrite", "Synapse", "Cell wall"],
+        correct: 1
+    },
+
+    {
+        question: "What carries impulses away from the cell body?",
+        answers: ["Dendrite", "Axon", "Nucleus", "Receptor"],
+        correct: 1
+    },
+
+    {
+        question: "A quick automatic response to a stimulus is called:",
         answers: [
-            "Slow and voluntary",
-            "Rapid and automatic",
-            "Always controlled consciously",
-            "A hormonal response"
+            "Hormonal action",
+            "Reflex action",
+            "Voluntary action",
+            "Growth movement"
         ],
         correct: 1
     },
 
     {
-        question: "What is the pathway followed during a reflex action called?",
+        question: "Which structure mainly coordinates a reflex action?",
         answers: [
-            "Hormonal pathway",
-            "Reflex arc",
-            "Blood pathway",
-            "Digestive pathway"
-        ],
-        correct: 1
-    },
-
-    {
-        question: "Which hormone helps regulate blood glucose level?",
-        answers: [
-            "Insulin",
-            "Adrenaline",
-            "Auxin",
-            "Thyroxine"
+            "Spinal cord",
+            "Cerebrum",
+            "Cerebellum",
+            "Pituitary gland"
         ],
         correct: 0
     },
 
     {
-        question: "Which plant hormone promotes cell growth and is involved in phototropism?",
+        question: "Hormones are generally transported through:",
         answers: [
-            "Insulin",
-            "Auxin",
-            "Adrenaline",
-            "Thyroxine"
+            "Neurons",
+            "Blood",
+            "Bones",
+            "Dendrites"
         ],
         correct: 1
+    },
+
+    {
+        question: "Which hormone helps regulate blood glucose?",
+        answers: [
+            "Auxin",
+            "Insulin",
+            "Adrenaline",
+            "Abscisic acid"
+        ],
+        correct: 1
+    },
+
+    {
+        question: "Which plant hormone promotes cell division?",
+        answers: [
+            "Cytokinin",
+            "Insulin",
+            "Adrenaline",
+            "Abscisic acid"
+        ],
+        correct: 0
     },
 
     {
         question: "Growth of a plant towards light is called:",
         answers: [
             "Geotropism",
-            "Hydrotropism",
             "Phototropism",
+            "Hydrotropism",
             "Chemotropism"
+        ],
+        correct: 1
+    },
+
+    {
+        question: "Growth response to gravity is called:",
+        answers: [
+            "Phototropism",
+            "Chemotropism",
+            "Geotropism",
+            "Thigmotropism"
         ],
         correct: 2
     },
 
     {
-        question: "Which part of the brain helps maintain balance and posture?",
+        question: "Which system uses chemical messengers called hormones?",
         answers: [
-            "Cerebellum",
-            "Cerebrum",
-            "Spinal cord",
-            "Medulla"
+            "Endocrine system",
+            "Skeletal system",
+            "Respiratory system",
+            "Digestive system"
         ],
         correct: 0
-    },
-
-    {
-        question: "Hormones are mainly transported through:",
-        answers: [
-            "Nerves",
-            "Blood",
-            "Bones",
-            "Air"
-        ],
-        correct: 1
     }
+
 ];
 
 
-/* =====================================================
-   VARIABLES
-===================================================== */
-
 let currentQuestion = 0;
 let score = 0;
+let xp = 0;
 let answered = false;
 
 
-/* =====================================================
-   ELEMENTS
-===================================================== */
+const questionElement =
+    document.getElementById("question");
 
-const questionElement = document.getElementById("question");
-const answersElement = document.getElementById("answers");
-const questionNumber = document.getElementById("question-number");
-const scoreElement = document.getElementById("score");
-const messageElement = document.getElementById("quiz-message");
-const nextButton = document.getElementById("next-button");
+const answersElement =
+    document.getElementById("answers");
 
-const finalResult = document.getElementById("final-result");
-const rewardCard = document.getElementById("reward-card");
-const rewardTitle = document.getElementById("reward-title");
-const rewardText = document.getElementById("reward-text");
-const rewardScore = document.getElementById("reward-score");
+const nextButton =
+    document.getElementById("nextButton");
+
+const questionNumber =
+    document.getElementById("questionNumber");
+
+const scoreElement =
+    document.getElementById("score");
+
+const messageElement =
+    document.getElementById("quizMessage");
+
+const xpFill =
+    document.getElementById("xpFill");
+
+const xpText =
+    document.getElementById("xpText");
+
+const rewardBox =
+    document.getElementById("rewardBox");
+
+const rewardTitle =
+    document.getElementById("rewardTitle");
+
+const rewardDescription =
+    document.getElementById("rewardDescription");
+
+const finalScore =
+    document.getElementById("finalScore");
+
+const finalXP =
+    document.getElementById("finalXP");
 
 
-/* =====================================================
-   START QUIZ
-===================================================== */
-
-function startQuiz() {
-
-    currentQuestion = 0;
-    score = 0;
-    answered = false;
-
-    scoreElement.textContent = "SCORE: 0";
-
-    finalResult.textContent = "";
-
-    rewardCard.style.display = "none";
-
-    nextButton.style.display = "inline-block";
-
-    showQuestion();
-}
-
-
-/* =====================================================
-   SHOW QUESTION
-===================================================== */
-
-function showQuestion() {
+function loadQuestion() {
 
     answered = false;
 
@@ -183,126 +194,127 @@ function showQuestion() {
 
     messageElement.textContent = "";
 
-    nextButton.textContent =
-        currentQuestion === questions.length - 1
-            ? "FINISH QUIZ →"
-            : "NEXT QUESTION →";
+    nextButton.style.display = "none";
 
 
     q.answers.forEach((answer, index) => {
 
-        const button = document.createElement("button");
+        const button =
+            document.createElement("button");
+
+        button.className = "answer";
 
         button.textContent =
             `${String.fromCharCode(65 + index)}. ${answer}`;
 
-        button.addEventListener("click", () => {
+        button.onclick = () =>
             selectAnswer(index, button);
-        });
 
         answersElement.appendChild(button);
 
     });
+
 }
 
 
-/* =====================================================
-   SELECT ANSWER
-===================================================== */
+function selectAnswer(index, button) {
 
-function selectAnswer(selectedIndex, selectedButton) {
-
-    if (answered) {
-        return;
-    }
+    if (answered) return;
 
     answered = true;
 
-    const correctIndex =
+    const correct =
         questions[currentQuestion].correct;
 
+
     const allButtons =
-        answersElement.querySelectorAll("button");
+        document.querySelectorAll(".answer");
 
 
-    allButtons.forEach((button, index) => {
+    if (index === correct) {
 
-        button.disabled = true;
-
-        if (index === correctIndex) {
-            button.classList.add("correct");
-        }
-
-    });
-
-
-    if (selectedIndex === correctIndex) {
+        button.classList.add("correct");
 
         score++;
 
-        selectedButton.classList.add("correct");
+        xp += 10;
 
         messageElement.textContent =
-            "⚡ CORRECT! Neural signal received.";
+            "✓ CORRECT! +10 XP";
+
+        messageElement.style.color =
+            "#00ff9d";
 
     } else {
 
-        selectedButton.classList.add("wrong");
+        button.classList.add("wrong");
+
+        allButtons[correct]
+            .classList.add("correct");
+
+        xp += 2;
 
         messageElement.textContent =
-            "❌ Not quite. The correct answer is highlighted.";
+            "✕ NOT QUITE — correct answer highlighted.";
 
+        messageElement.style.color =
+            "#ff6378";
     }
 
 
-    scoreElement.textContent =
-        `SCORE: ${score}`;
+    scoreElement.textContent = score;
+
+    updateXP();
+
+    nextButton.style.display = "inline-block";
+
+
+    if (currentQuestion === questions.length - 1) {
+
+        nextButton.textContent =
+            "FINISH QUIZ →";
+
+    }
 
 }
 
 
-/* =====================================================
-   NEXT QUESTION
-===================================================== */
+function updateXP() {
 
-nextButton.addEventListener("click", () => {
+    const percentage =
+        Math.min((xp / 150) * 100, 100);
 
-    if (!answered) {
+    xpFill.style.width =
+        percentage + "%";
 
-        messageElement.textContent =
-            "Choose an answer first ⚡";
+    xpText.textContent =
+        `XP ${xp} / 150`;
+
+}
+
+
+nextButton.onclick = function() {
+
+    if (!answered) return;
+
+    currentQuestion++;
+
+    if (currentQuestion >= questions.length) {
+
+        finishQuiz();
 
         return;
     }
 
+    loadQuestion();
 
-    currentQuestion++;
+};
 
-
-    if (currentQuestion < questions.length) {
-
-        showQuestion();
-
-    } else {
-
-        finishQuiz();
-
-    }
-
-});
-
-
-/* =====================================================
-   FINISH QUIZ
-===================================================== */
 
 function finishQuiz() {
 
     questionElement.textContent =
-        "MISSION COMPLETE 🧠";
-
-    questionNumber.textContent =
-        "QUIZ COMPLETE";
+        "QUIZ COMPLETE!";
 
     answersElement.innerHTML = "";
 
@@ -310,88 +322,74 @@ function finishQuiz() {
 
     nextButton.style.display = "none";
 
-
-    const percentage =
-        (score / questions.length) * 100;
-
-
-    finalResult.textContent =
-        `Your score: ${score}/${questions.length} — ${percentage}%`;
+    questionNumber.textContent =
+        "MISSION COMPLETE";
 
 
-    showReward(percentage);
+    finalScore.textContent =
+        score;
 
-}
-
-
-/* =====================================================
-   REWARD SYSTEM
-===================================================== */
-
-function showReward(percentage) {
-
-    rewardCard.style.display = "block";
+    finalXP.textContent =
+        xp;
 
 
-    if (percentage === 100) {
+    if (score === 15) {
 
         rewardTitle.textContent =
-            "🧠 NEURO LEGEND";
+            "🏆 NEURAL LEGEND";
 
-        rewardText.textContent =
+        rewardDescription.textContent =
             "Perfect score! Your control & coordination knowledge is elite.";
 
     }
 
-    else if (percentage >= 80) {
+    else if (score >= 12) {
 
         rewardTitle.textContent =
-            "⚡ NEURAL MASTER";
+            "🥇 NEURAL MASTER";
 
-        rewardText.textContent =
-            "Excellent work! Your biology signals are firing perfectly.";
+        rewardDescription.textContent =
+            "Outstanding! You have mastered most of the chapter.";
 
     }
 
-    else if (percentage >= 60) {
+    else if (score >= 9) {
 
         rewardTitle.textContent =
-            "🔥 BRAIN BOOSTER";
+            "🥈 NEURAL EXPLORER";
 
-        rewardText.textContent =
-            "Great job! A little more revision and you'll reach the top.";
+        rewardDescription.textContent =
+            "Great work! Your neural knowledge is growing.";
 
     }
 
-    else if (percentage >= 40) {
+    else if (score >= 6) {
 
         rewardTitle.textContent =
-            "🌱 BIO EXPLORER";
+            "🥉 NEURAL ROOKIE";
 
-        rewardText.textContent =
-            "Good start! Revise the chapter once more and try again.";
+        rewardDescription.textContent =
+            "Good attempt! Revise once more and level up.";
 
     }
 
     else {
 
         rewardTitle.textContent =
-            "🚀 NEURAL TRAINEE";
+            "🧠 NEURAL RECRUIT";
 
-        rewardText.textContent =
-            "Keep learning! Your next attempt can be much stronger.";
+        rewardDescription.textContent =
+            "Keep learning. Every correct answer makes your brain stronger.";
 
     }
 
 
-    rewardScore.textContent =
-        `FINAL SCORE: ${score} / ${questions.length}`;
+    rewardBox.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
 
 }
 
 
-/* =====================================================
-   START
-===================================================== */
-
-startQuiz();
+loadQuestion();
