@@ -15,11 +15,6 @@ body {
     overflow-x: hidden;
 }
 
-
-/* =========================
-   BACKGROUND
-========================= */
-
 body::before {
     content: "";
     position: fixed;
@@ -29,12 +24,12 @@ body::before {
     background:
         radial-gradient(
             circle at 15% 20%,
-            rgba(0, 234, 255, 0.12),
+            rgba(0,234,255,.12),
             transparent 28%
         ),
         radial-gradient(
             circle at 85% 70%,
-            rgba(130, 70, 255, 0.12),
+            rgba(130,70,255,.12),
             transparent 30%
         );
 }
@@ -48,12 +43,12 @@ body::after {
 
     background-image:
         linear-gradient(
-            rgba(255,255,255,0.025) 1px,
+            rgba(255,255,255,.025) 1px,
             transparent 1px
         ),
         linear-gradient(
             90deg,
-            rgba(255,255,255,0.025) 1px,
+            rgba(255,255,255,.025) 1px,
             transparent 1px
         );
 
@@ -61,9 +56,7 @@ body::after {
 }
 
 
-/* =========================
-   NAVBAR
-========================= */
+/* NAVBAR */
 
 .navbar {
     position: fixed;
@@ -79,9 +72,9 @@ body::after {
 
     padding: 0 6%;
 
-    background: rgba(2,4,11,0.85);
+    background: rgba(2,4,11,.88);
 
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,.08);
 
     backdrop-filter: blur(15px);
 
@@ -96,34 +89,23 @@ body::after {
 
 .logo span {
     color: #00eaff;
-
-    text-shadow:
-        0 0 15px #00eaff;
+    text-shadow: 0 0 15px #00eaff;
 }
 
 nav a {
     color: #8996aa;
-
     text-decoration: none;
-
     font-size: 11px;
-
-    margin-left: 20px;
-
-    transition: 0.3s;
+    margin-left: 18px;
+    transition: .3s;
 }
 
 nav a:hover {
     color: #00eaff;
-
-    text-shadow:
-        0 0 12px #00eaff;
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero {
     min-height: 100vh;
@@ -138,30 +120,22 @@ nav a:hover {
 
 .hero-content {
     max-width: 760px;
-
     z-index: 5;
 }
 
 .tag,
 .section-tag {
     color: #00eaff;
-
     font-size: 11px;
-
     font-weight: bold;
-
     letter-spacing: 4px;
-
     margin-bottom: 20px;
 }
 
 .hero h1 {
-    font-size: clamp(60px, 10vw, 135px);
-
-    line-height: 0.82;
-
+    font-size: clamp(60px,10vw,135px);
+    line-height: .82;
     letter-spacing: -8px;
-
     margin-bottom: 35px;
 }
 
@@ -170,16 +144,13 @@ nav a:hover {
 
     text-shadow:
         0 0 15px #00eaff,
-        0 0 55px rgba(0,234,255,0.35);
+        0 0 55px rgba(0,234,255,.35);
 }
 
 .hero-text {
     max-width: 600px;
-
     color: #8996aa;
-
     font-size: 17px;
-
     line-height: 1.8;
 }
 
@@ -199,30 +170,21 @@ nav a:hover {
     text-decoration: none;
 
     font-size: 11px;
-
     font-weight: bold;
-
     letter-spacing: 2px;
 
-    transition: 0.3s;
+    transition: .3s;
 }
 
 .hero-btn:hover {
     color: #02040b;
-
     background: #00eaff;
-
-    box-shadow:
-        0 0 25px #00eaff,
-        0 0 70px rgba(0,234,255,0.35);
-
+    box-shadow: 0 0 30px #00eaff;
     transform: translateY(-3px);
 }
 
 
-/* =========================
-   BRAIN VISUAL
-========================= */
+/* BRAIN */
 
 .hero-brain {
     position: absolute;
@@ -252,20 +214,19 @@ nav a:hover {
     background:
         radial-gradient(
             circle,
-            rgba(0,234,255,0.15),
+            rgba(0,234,255,.15),
             transparent 70%
         );
 
-    border: 1px solid rgba(0,234,255,0.5);
+    border: 1px solid rgba(0,234,255,.5);
 
     box-shadow:
-        0 0 35px rgba(0,234,255,0.25);
+        0 0 35px rgba(0,234,255,.25);
 
     animation: floatBrain 5s ease-in-out infinite;
 }
 
 @keyframes floatBrain {
-
     0%,100% {
         transform: translateY(0);
     }
@@ -277,10 +238,8 @@ nav a:hover {
 
 .orbit {
     position: absolute;
-
     border-radius: 50%;
-
-    border: 1px solid rgba(0,234,255,0.25);
+    border: 1px solid rgba(0,234,255,.25);
 }
 
 .orbit1 {
@@ -294,7 +253,7 @@ nav a:hover {
     width: 500px;
     height: 250px;
 
-    border-color: rgba(150,80,255,0.25);
+    border-color: rgba(150,80,255,.25);
 
     transform: rotate(-25deg);
 
@@ -302,7 +261,6 @@ nav a:hover {
 }
 
 @keyframes rotate {
-
     from {
         transform: rotate(0deg);
     }
@@ -313,9 +271,7 @@ nav a:hover {
 }
 
 
-/* =========================
-   SECTIONS
-========================= */
+/* SECTIONS */
 
 .section {
     width: 88%;
@@ -323,13 +279,13 @@ nav a:hover {
 
     margin: auto;
 
-    padding: 120px 0;
+    padding: 110px 0;
 }
 
 .section h2 {
     font-size: clamp(45px,7vw,85px);
 
-    line-height: 0.9;
+    line-height: .9;
 
     letter-spacing: -5px;
 
@@ -340,7 +296,7 @@ nav a:hover {
     color: #00eaff;
 
     text-shadow:
-        0 0 20px rgba(0,234,255,0.3);
+        0 0 20px rgba(0,234,255,.3);
 }
 
 .intro {
@@ -352,9 +308,7 @@ nav a:hover {
 }
 
 
-/* =========================
-   CARDS
-========================= */
+/* CARDS */
 
 .cards {
     display: grid;
@@ -370,60 +324,51 @@ nav a:hover {
 .card {
     padding: 30px;
 
-    min-height: 250px;
+    min-height: 230px;
 
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,.08);
 
     border-radius: 16px;
 
-    background: rgba(255,255,255,0.025);
+    background: rgba(255,255,255,.025);
 
-    transition: 0.35s;
+    transition: .35s;
 
     position: relative;
-
-    overflow: hidden;
 }
 
 .card:hover {
     transform: translateY(-8px);
 
-    border-color: rgba(0,234,255,0.55);
+    border-color: rgba(0,234,255,.55);
 
     box-shadow:
-        0 15px 50px rgba(0,234,255,0.08);
+        0 15px 50px rgba(0,234,255,.08);
 }
 
 .icon {
     font-size: 40px;
-
     margin-bottom: 20px;
 }
 
 .card small {
     color: #00eaff;
-
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 
 .card h3 {
-    font-size: 25px;
-
+    font-size: 24px;
     margin: 10px 0;
 }
 
 .card p {
     color: #8996aa;
-
     font-size: 14px;
-
     line-height: 1.8;
 }
 
 
-/* =========================
-   BRAIN SECTION
-========================= */
+/* BRAIN SECTION */
 
 .brain-section {
     display: grid;
@@ -448,17 +393,17 @@ nav a:hover {
 .brain-parts div {
     padding: 18px 20px;
 
-    background: rgba(0,234,255,0.04);
+    background: rgba(0,234,255,.04);
 
     border-left: 2px solid #00eaff;
 
-    transition: 0.3s;
+    transition: .3s;
 }
 
 .brain-parts div:hover {
     transform: translateX(7px);
 
-    background: rgba(0,234,255,0.08);
+    background: rgba(0,234,255,.08);
 }
 
 .brain-parts strong {
@@ -475,6 +420,8 @@ nav a:hover {
     font-size: 14px;
 
     margin-top: 5px;
+
+    line-height: 1.7;
 }
 
 .brain-box {
@@ -488,25 +435,23 @@ nav a:hover {
 
     align-items: center;
 
-    border: 1px solid rgba(0,234,255,0.25);
+    border: 1px solid rgba(0,234,255,.25);
 
     border-radius: 20px;
 
     background:
         radial-gradient(
             circle,
-            rgba(0,234,255,0.12),
+            rgba(0,234,255,.12),
             transparent 65%
         );
 }
 
 .big-brain {
-    font-size: 180px;
+    font-size: 170px;
 
     filter:
-        drop-shadow(
-            0 0 25px #00eaff
-        );
+        drop-shadow(0 0 25px #00eaff);
 
     animation: floatBrain 5s ease-in-out infinite;
 }
@@ -520,20 +465,18 @@ nav a:hover {
 }
 
 
-/* =========================
-   REFLEX ARC
-========================= */
+/* REFLEX */
 
 .reflex-card {
-    margin-top: 55px;
+    margin-top: 50px;
 
     padding: 35px;
 
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,.1);
 
     border-radius: 16px;
 
-    background: rgba(255,255,255,0.025);
+    background: rgba(255,255,255,.025);
 }
 
 .reflex-heading {
@@ -561,13 +504,15 @@ nav a:hover {
 .reflex-flow div {
     padding: 14px 17px;
 
-    border: 1px solid rgba(0,234,255,0.3);
+    border: 1px solid rgba(0,234,255,.3);
 
     border-radius: 8px;
 
-    background: rgba(0,234,255,0.05);
+    background: rgba(0,234,255,.05);
 
     font-size: 13px;
+
+    text-align: center;
 }
 
 .reflex-flow span {
@@ -577,9 +522,7 @@ nav a:hover {
 }
 
 
-/* =========================
-   PLANTS
-========================= */
+/* PLANTS */
 
 .plant-grid {
     display: grid;
@@ -597,19 +540,19 @@ nav a:hover {
 
     padding: 35px 25px;
 
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,.08);
 
     border-radius: 16px;
 
-    background: rgba(255,255,255,0.025);
+    background: rgba(255,255,255,.025);
 
-    transition: 0.3s;
+    transition: .3s;
 }
 
 .plant-card:hover {
     transform: translateY(-8px);
 
-    border-color: rgba(0,234,255,0.45);
+    border-color: rgba(0,234,255,.45);
 }
 
 .plant-card div {
@@ -626,12 +569,12 @@ nav a:hover {
     color: #8996aa;
 
     font-size: 14px;
+
+    line-height: 1.7;
 }
 
 
-/* =========================
-   QUIZ
-========================= */
+/* QUIZ */
 
 .quiz-section {
     max-width: 1050px;
@@ -649,12 +592,12 @@ nav a:hover {
     background:
         linear-gradient(
             145deg,
-            rgba(0,234,255,0.07),
-            rgba(120,70,255,0.05)
+            rgba(0,234,255,.07),
+            rgba(120,70,255,.05)
         );
 
     box-shadow:
-        0 0 50px rgba(0,234,255,0.08);
+        0 0 50px rgba(0,234,255,.08);
 }
 
 .quiz-top {
@@ -694,23 +637,23 @@ nav a:hover {
 
     color: white;
 
-    background: rgba(255,255,255,0.035);
+    background: rgba(255,255,255,.035);
 
-    border: 1px solid rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,.12);
 
     border-radius: 9px;
 
     cursor: pointer;
 
-    transition: 0.25s;
+    transition: .25s;
 
     font-size: 14px;
 }
 
-.answer:hover {
+.answer:hover:not(:disabled) {
     border-color: #00eaff;
 
-    background: rgba(0,234,255,0.08);
+    background: rgba(0,234,255,.08);
 
     transform: translateY(-3px);
 }
@@ -720,7 +663,7 @@ nav a:hover {
 
     border-color: #42ff9a;
 
-    background: rgba(66,255,154,0.08);
+    background: rgba(66,255,154,.08);
 }
 
 .answer.wrong {
@@ -728,7 +671,7 @@ nav a:hover {
 
     border-color: #ff4d6d;
 
-    background: rgba(255,77,109,0.08);
+    background: rgba(255,77,109,.08);
 }
 
 .answer:disabled {
@@ -783,9 +726,7 @@ nav a:hover {
 }
 
 
-/* =========================
-   REWARD
-========================= */
+/* REWARD */
 
 #reward-card {
     display: none;
@@ -803,14 +744,14 @@ nav a:hover {
     background:
         radial-gradient(
             circle,
-            rgba(0,234,255,0.13),
+            rgba(0,234,255,.13),
             transparent 70%
         );
 
     box-shadow:
-        0 0 40px rgba(0,234,255,0.15);
+        0 0 40px rgba(0,234,255,.15);
 
-    animation: rewardIn 0.8s ease;
+    animation: rewardIn .8s ease;
 }
 
 #reward-icon {
@@ -819,9 +760,7 @@ nav a:hover {
     margin-bottom: 15px;
 
     filter:
-        drop-shadow(
-            0 0 18px #00eaff
-        );
+        drop-shadow(0 0 18px #00eaff);
 }
 
 #reward-card small {
@@ -843,6 +782,8 @@ nav a:hover {
     color: #8996aa;
 
     font-size: 14px;
+
+    line-height: 1.7;
 }
 
 #reward-score {
@@ -859,25 +800,18 @@ nav a:hover {
 
     from {
         opacity: 0;
-
-        transform:
-            translateY(25px)
-            scale(0.95);
+        transform: translateY(25px) scale(.95);
     }
 
     to {
         opacity: 1;
-
-        transform:
-            translateY(0)
-            scale(1);
+        transform: translateY(0) scale(1);
     }
+
 }
 
 
-/* =========================
-   FINAL
-========================= */
+/* FINAL */
 
 .final {
     min-height: 60vh;
@@ -898,7 +832,7 @@ nav a:hover {
 .final h2 {
     font-size: clamp(50px,8vw,100px);
 
-    line-height: 0.9;
+    line-height: .9;
 
     letter-spacing: -5px;
 
@@ -917,16 +851,14 @@ nav a:hover {
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer {
     text-align: center;
 
     padding: 35px;
 
-    border-top: 1px solid rgba(255,255,255,0.08);
+    border-top: 1px solid rgba(255,255,255,.08);
 
     color: #5f6b7c;
 
@@ -938,9 +870,7 @@ footer {
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media (max-width: 850px) {
 
@@ -964,7 +894,7 @@ footer {
 
         right: -120px;
 
-        opacity: 0.18;
+        opacity: .18;
     }
 
     .brain-glow {
@@ -983,7 +913,7 @@ footer {
     .section {
         width: 90%;
 
-        padding: 90px 0;
+        padding: 85px 0;
     }
 
     .section h2 {
@@ -1011,12 +941,9 @@ footer {
     .big-brain {
         font-size: 130px;
     }
+
 }
 
-
-/* =========================
-   SMALL PHONE
-========================= */
 
 @media (max-width: 480px) {
 
@@ -1040,4 +967,13 @@ footer {
     .reflex-card {
         padding: 22px;
     }
+
+    .reflex-flow span {
+        display: none;
+    }
+
+    .reflex-flow {
+        flex-direction: column;
+    }
+
 }
