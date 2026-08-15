@@ -1,395 +1,493 @@
+/* =========================================
+   NEUROX QUIZ
+   CONTROL & COORDINATION
+========================================= */
+
 const questions = [
 
     {
-        question: "What is the structural and functional unit of the nervous system?",
-        answers: ["Hormone", "Neuron", "Brain", "Spinal cord"],
-        correct: 1
-    },
-
-    {
-        question: "Which part of the brain controls thinking and memory?",
-        answers: ["Cerebellum", "Medulla", "Cerebrum", "Spinal cord"],
-        correct: 2
-    },
-
-    {
-        question: "Which part of the brain maintains balance and posture?",
-        answers: ["Cerebrum", "Cerebellum", "Medulla", "Hypothalamus"],
-        correct: 1
-    },
-
-    {
-        question: "Which part of the brain controls involuntary actions?",
-        answers: ["Cerebrum", "Cerebellum", "Medulla", "Neuron"],
-        correct: 2
-    },
-
-    {
-        question: "What detects a stimulus?",
-        answers: ["Receptor", "Effector", "Hormone", "Axon"],
-        correct: 0
-    },
-
-    {
-        question: "Which part of a neuron receives information?",
-        answers: ["Axon", "Dendrite", "Synapse", "Cell wall"],
-        correct: 1
-    },
-
-    {
-        question: "What carries impulses away from the cell body?",
-        answers: ["Dendrite", "Axon", "Nucleus", "Receptor"],
-        correct: 1
-    },
-
-    {
-        question: "A quick automatic response to a stimulus is called:",
-        answers: [
-            "Hormonal action",
-            "Reflex action",
-            "Voluntary action",
-            "Growth movement"
+        question: "What is the basic structural and functional unit of the nervous system?",
+        options: [
+            "Neuron",
+            "Hormone",
+            "Gland",
+            "Muscle"
         ],
-        correct: 1
+        answer: 0
     },
 
     {
-        question: "Which structure mainly coordinates a reflex action?",
-        answers: [
-            "Spinal cord",
-            "Cerebrum",
+        question: "Which part of the brain mainly controls balance and posture?",
+        options: [
+            "Forebrain",
             "Cerebellum",
-            "Pituitary gland"
+            "Medulla",
+            "Spinal cord"
         ],
-        correct: 0
+        answer: 1
     },
 
     {
-        question: "Hormones are generally transported through:",
-        answers: [
-            "Neurons",
-            "Blood",
-            "Bones",
-            "Dendrites"
+        question: "Which part of the nervous system is mainly involved in reflex actions?",
+        options: [
+            "Spinal cord",
+            "Forebrain",
+            "Cerebellum",
+            "Eye"
         ],
-        correct: 1
+        answer: 0
     },
 
     {
-        question: "Which hormone helps regulate blood glucose?",
-        answers: [
-            "Auxin",
-            "Insulin",
-            "Adrenaline",
-            "Abscisic acid"
+        question: "A reflex action is usually:",
+        options: [
+            "Slow and voluntary",
+            "Fast and automatic",
+            "Always conscious",
+            "Only found in plants"
         ],
-        correct: 1
-    },
-
-    {
-        question: "Which plant hormone promotes cell division?",
-        answers: [
-            "Cytokinin",
-            "Insulin",
-            "Adrenaline",
-            "Abscisic acid"
-        ],
-        correct: 0
+        answer: 1
     },
 
     {
         question: "Growth of a plant towards light is called:",
-        answers: [
+        options: [
             "Geotropism",
+            "Hydrotropism",
             "Phototropism",
+            "Chemotropism"
+        ],
+        answer: 2
+    },
+
+    {
+        question: "Which is the correct reflex arc pathway?",
+        options: [
+            "Receptor → Sensory neuron → Spinal cord → Motor neuron → Effector",
+            "Brain → Muscle → Receptor",
+            "Effector → Brain → Receptor",
+            "Motor neuron → Receptor → Brain"
+        ],
+        answer: 0
+    },
+
+    {
+        question: "Which hormone helps regulate blood glucose level?",
+        options: [
+            "Auxin",
+            "Insulin",
+            "Adrenaline",
+            "Thyroxine"
+        ],
+        answer: 1
+    },
+
+    {
+        question: "Which part of the brain is mainly responsible for thinking and memory?",
+        options: [
+            "Forebrain",
+            "Cerebellum",
+            "Medulla",
+            "Spinal cord"
+        ],
+        answer: 0
+    },
+
+    {
+        question: "Which hormone is associated with the emergency 'fight or flight' response?",
+        options: [
+            "Insulin",
+            "Auxin",
+            "Adrenaline",
+            "Thyroxine"
+        ],
+        answer: 2
+    },
+
+    {
+        question: "Which type of movement is the growth of a plant part in response to water?",
+        options: [
+            "Phototropism",
+            "Geotropism",
             "Hydrotropism",
             "Chemotropism"
         ],
-        correct: 1
-    },
-
-    {
-        question: "Growth response to gravity is called:",
-        answers: [
-            "Phototropism",
-            "Chemotropism",
-            "Geotropism",
-            "Thigmotropism"
-        ],
-        correct: 2
-    },
-
-    {
-        question: "Which system uses chemical messengers called hormones?",
-        answers: [
-            "Endocrine system",
-            "Skeletal system",
-            "Respiratory system",
-            "Digestive system"
-        ],
-        correct: 0
+        answer: 2
     }
 
 ];
 
 
+/* =========================================
+   VARIABLES
+========================================= */
+
 let currentQuestion = 0;
 let score = 0;
-let xp = 0;
 let answered = false;
 
 
-const questionElement =
-    document.getElementById("question");
-
-const answersElement =
-    document.getElementById("answers");
-
-const nextButton =
-    document.getElementById("nextButton");
+/* =========================================
+   ELEMENTS
+========================================= */
 
 const questionNumber =
-    document.getElementById("questionNumber");
+    document.getElementById("question-number");
 
-const scoreElement =
+const scoreDisplay =
     document.getElementById("score");
 
-const messageElement =
-    document.getElementById("quizMessage");
+const questionText =
+    document.getElementById("question");
 
-const xpFill =
-    document.getElementById("xpFill");
+const answersBox =
+    document.getElementById("answers");
 
-const xpText =
-    document.getElementById("xpText");
+const message =
+    document.getElementById("quiz-message");
 
-const rewardBox =
-    document.getElementById("rewardBox");
+const nextButton =
+    document.getElementById("next-button");
+
+const finalResult =
+    document.getElementById("final-result");
+
+const rewardCard =
+    document.getElementById("reward-card");
+
+const rewardIcon =
+    document.getElementById("reward-icon");
 
 const rewardTitle =
-    document.getElementById("rewardTitle");
+    document.getElementById("reward-title");
 
-const rewardDescription =
-    document.getElementById("rewardDescription");
+const rewardText =
+    document.getElementById("reward-text");
 
-const finalScore =
-    document.getElementById("finalScore");
+const rewardScore =
+    document.getElementById("reward-score");
 
-const finalXP =
-    document.getElementById("finalXP");
 
+/* =========================================
+   LOAD QUESTION
+========================================= */
 
 function loadQuestion() {
 
     answered = false;
 
-    const q = questions[currentQuestion];
-
-    questionElement.textContent = q.question;
+    const question =
+        questions[currentQuestion];
 
     questionNumber.textContent =
-        `QUESTION ${currentQuestion + 1} / ${questions.length}`;
+        "QUESTION " +
+        (currentQuestion + 1) +
+        " / " +
+        questions.length;
 
-    answersElement.innerHTML = "";
+    scoreDisplay.textContent =
+        "SCORE: " + score;
 
-    messageElement.textContent = "";
+    questionText.textContent =
+        question.question;
+
+    message.textContent = "";
 
     nextButton.style.display = "none";
 
+    nextButton.textContent =
+        "NEXT QUESTION →";
 
-    q.answers.forEach((answer, index) => {
+    answersBox.innerHTML = "";
 
-        const button =
-            document.createElement("button");
 
-        button.className = "answer";
+    question.options.forEach(
+        function(option, index) {
 
-        button.textContent =
-            `${String.fromCharCode(65 + index)}. ${answer}`;
+            const button =
+                document.createElement("button");
 
-        button.onclick = () =>
-            selectAnswer(index, button);
+            button.className =
+                "answer";
 
-        answersElement.appendChild(button);
+            button.textContent =
+                option;
 
-    });
+            button.addEventListener(
+                "click",
+                function() {
+
+                    checkAnswer(
+                        index,
+                        button
+                    );
+
+                }
+            );
+
+            answersBox.appendChild(button);
+
+        }
+    );
 
 }
 
 
-function selectAnswer(index, button) {
+/* =========================================
+   CHECK ANSWER
+========================================= */
 
-    if (answered) return;
+function checkAnswer(
+    selectedAnswer,
+    selectedButton
+) {
+
+    if (answered) {
+        return;
+    }
 
     answered = true;
 
-    const correct =
-        questions[currentQuestion].correct;
-
+    const correctAnswer =
+        questions[currentQuestion].answer;
 
     const allButtons =
         document.querySelectorAll(".answer");
 
 
-    if (index === correct) {
+    allButtons.forEach(
+        function(button) {
 
-        button.classList.add("correct");
+            button.disabled = true;
+
+        }
+    );
+
+
+    allButtons[correctAnswer]
+        .classList.add("correct");
+
+
+    if (
+        selectedAnswer ===
+        correctAnswer
+    ) {
 
         score++;
 
-        xp += 10;
-
-        messageElement.textContent =
-            "✓ CORRECT! +10 XP";
-
-        messageElement.style.color =
-            "#00ff9d";
-
-    } else {
-
-        button.classList.add("wrong");
-
-        allButtons[correct]
+        selectedButton
             .classList.add("correct");
 
-        xp += 2;
-
-        messageElement.textContent =
-            "✕ NOT QUITE — correct answer highlighted.";
-
-        messageElement.style.color =
-            "#ff6378";
-    }
-
-
-    scoreElement.textContent = score;
-
-    updateXP();
-
-    nextButton.style.display = "inline-block";
-
-
-    if (currentQuestion === questions.length - 1) {
-
-        nextButton.textContent =
-            "FINISH QUIZ →";
-
-    }
-
-}
-
-
-function updateXP() {
-
-    const percentage =
-        Math.min((xp / 150) * 100, 100);
-
-    xpFill.style.width =
-        percentage + "%";
-
-    xpText.textContent =
-        `XP ${xp} / 150`;
-
-}
-
-
-nextButton.onclick = function() {
-
-    if (!answered) return;
-
-    currentQuestion++;
-
-    if (currentQuestion >= questions.length) {
-
-        finishQuiz();
-
-        return;
-    }
-
-    loadQuestion();
-
-};
-
-
-function finishQuiz() {
-
-    questionElement.textContent =
-        "QUIZ COMPLETE!";
-
-    answersElement.innerHTML = "";
-
-    messageElement.textContent = "";
-
-    nextButton.style.display = "none";
-
-    questionNumber.textContent =
-        "MISSION COMPLETE";
-
-
-    finalScore.textContent =
-        score;
-
-    finalXP.textContent =
-        xp;
-
-
-    if (score === 15) {
-
-        rewardTitle.textContent =
-            "🏆 NEURAL LEGEND";
-
-        rewardDescription.textContent =
-            "Perfect score! Your control & coordination knowledge is elite.";
-
-    }
-
-    else if (score >= 12) {
-
-        rewardTitle.textContent =
-            "🥇 NEURAL MASTER";
-
-        rewardDescription.textContent =
-            "Outstanding! You have mastered most of the chapter.";
-
-    }
-
-    else if (score >= 9) {
-
-        rewardTitle.textContent =
-            "🥈 NEURAL EXPLORER";
-
-        rewardDescription.textContent =
-            "Great work! Your neural knowledge is growing.";
-
-    }
-
-    else if (score >= 6) {
-
-        rewardTitle.textContent =
-            "🥉 NEURAL ROOKIE";
-
-        rewardDescription.textContent =
-            "Good attempt! Revise once more and level up.";
+        message.textContent =
+            "✓ CORRECT! AURA +1 🔥";
 
     }
 
     else {
 
-        rewardTitle.textContent =
-            "🧠 NEURAL RECRUIT";
+        selectedButton
+            .classList.add("wrong");
 
-        rewardDescription.textContent =
-            "Keep learning. Every correct answer makes your brain stronger.";
+        message.textContent =
+            "✕ Not quite! The correct answer is highlighted.";
 
     }
 
 
-    rewardBox.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-    });
+    scoreDisplay.textContent =
+        "SCORE: " + score;
+
+    nextButton.style.display =
+        "inline-block";
+
+
+    if (
+        currentQuestion ===
+        questions.length - 1
+    ) {
+
+        nextButton.textContent =
+            "UNLOCK REWARD 🏆";
+
+    }
 
 }
 
+
+/* =========================================
+   NEXT QUESTION
+========================================= */
+
+nextButton.addEventListener(
+    "click",
+    function() {
+
+        currentQuestion++;
+
+        if (
+            currentQuestion <
+            questions.length
+        ) {
+
+            loadQuestion();
+
+        }
+
+        else {
+
+            finishQuiz();
+
+        }
+
+    }
+);
+
+
+/* =========================================
+   FINISH QUIZ
+========================================= */
+
+function finishQuiz() {
+
+    questionNumber.textContent =
+        "MISSION COMPLETE";
+
+    scoreDisplay.textContent =
+        "FINAL SCORE: " +
+        score +
+        " / " +
+        questions.length;
+
+    questionText.textContent =
+        "SYSTEM CHECK COMPLETE ⚡";
+
+    answersBox.innerHTML = "";
+
+    message.textContent =
+        "Your Biology Aura has been calculated.";
+
+    nextButton.style.display =
+        "none";
+
+    finalResult.textContent =
+        "🔥 " +
+        score +
+        " / " +
+        questions.length;
+
+    giveReward();
+
+}
+
+
+/* =========================================
+   REWARD SYSTEM
+========================================= */
+
+function giveReward() {
+
+    let icon;
+    let title;
+    let text;
+
+
+    if (score === 10) {
+
+        icon = "👑";
+
+        title =
+            "NEURO MASTER";
+
+        text =
+            "PERFECT SCORE! Your Control & Coordination knowledge is elite.";
+
+    }
+
+    else if (score >= 8) {
+
+        icon = "⚡";
+
+        title =
+            "BRAIN COMMANDER";
+
+        text =
+            "Outstanding performance! Your Biology knowledge is extremely strong.";
+
+    }
+
+    else if (score >= 6) {
+
+        icon = "🧠";
+
+        title =
+            "NEURAL PRO";
+
+        text =
+            "Great work! You have a strong understanding of the chapter.";
+
+    }
+
+    else if (score >= 4) {
+
+        icon = "🔬";
+
+        title =
+            "BIO EXPLORER";
+
+        text =
+            "Good beginning! Revise the chapter once more and level up.";
+
+    }
+
+    else {
+
+        icon = "🚀";
+
+        title =
+            "SYSTEM INITIATED";
+
+        text =
+            "Your mission has begun. Revise the chapter and try again.";
+
+    }
+
+
+    rewardIcon.textContent =
+        icon;
+
+    rewardTitle.textContent =
+        title;
+
+    rewardText.textContent =
+        text;
+
+    rewardScore.textContent =
+        "AURA SCORE: " +
+        score +
+        " / " +
+        questions.length;
+
+    rewardCard.style.display =
+        "block";
+
+
+    setTimeout(
+        function() {
+
+            rewardCard.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+        },
+        300
+    );
+
+}
+
+
+/* =========================================
+   START QUIZ
+========================================= */
 
 loadQuestion();
