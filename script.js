@@ -1,12 +1,12 @@
-/* =====================================
-   NEUROX QUIZ SYSTEM
+/* =========================================
+   NEUROX QUIZ
    CONTROL & COORDINATION
-===================================== */
+========================================= */
 
 const questions = [
 
     {
-        question: "What is the basic unit of the nervous system?",
+        question: "What is the basic structural and functional unit of the nervous system?",
         options: [
             "Neuron",
             "Hormone",
@@ -17,7 +17,7 @@ const questions = [
     },
 
     {
-        question: "Which part of the brain maintains balance and posture?",
+        question: "Which part of the brain mainly controls balance and posture?",
         options: [
             "Forebrain",
             "Cerebellum",
@@ -72,7 +72,7 @@ const questions = [
     },
 
     {
-        question: "Which hormone helps control blood glucose level?",
+        question: "Which hormone helps regulate blood glucose level?",
         options: [
             "Auxin",
             "Insulin",
@@ -80,19 +80,56 @@ const questions = [
             "Thyroxine"
         ],
         answer: 1
+    },
+
+    {
+        question: "Which part of the brain is mainly responsible for thinking and memory?",
+        options: [
+            "Forebrain",
+            "Cerebellum",
+            "Medulla",
+            "Spinal cord"
+        ],
+        answer: 0
+    },
+
+    {
+        question: "Which hormone is associated with the emergency 'fight or flight' response?",
+        options: [
+            "Insulin",
+            "Auxin",
+            "Adrenaline",
+            "Thyroxine"
+        ],
+        answer: 2
+    },
+
+    {
+        question: "Which type of movement is the growth of a plant part in response to water?",
+        options: [
+            "Phototropism",
+            "Geotropism",
+            "Hydrotropism",
+            "Chemotropism"
+        ],
+        answer: 2
     }
 
 ];
 
+
+/* =========================================
+   VARIABLES
+========================================= */
 
 let currentQuestion = 0;
 let score = 0;
 let answered = false;
 
 
-/* =====================================
+/* =========================================
    ELEMENTS
-===================================== */
+========================================= */
 
 const questionNumber =
     document.getElementById("question-number");
@@ -131,15 +168,16 @@ const rewardScore =
     document.getElementById("reward-score");
 
 
-/* =====================================
+/* =========================================
    LOAD QUESTION
-===================================== */
+========================================= */
 
 function loadQuestion() {
 
     answered = false;
 
-    const q = questions[currentQuestion];
+    const question =
+        questions[currentQuestion];
 
     questionNumber.textContent =
         "QUESTION " +
@@ -151,7 +189,7 @@ function loadQuestion() {
         "SCORE: " + score;
 
     questionText.textContent =
-        q.question;
+        question.question;
 
     message.textContent = "";
 
@@ -163,33 +201,46 @@ function loadQuestion() {
     answersBox.innerHTML = "";
 
 
-    q.options.forEach(function(option, index) {
+    question.options.forEach(
+        function(option, index) {
 
-        const button =
-            document.createElement("button");
+            const button =
+                document.createElement("button");
 
-        button.className = "answer";
+            button.className =
+                "answer";
 
-        button.textContent = option;
+            button.textContent =
+                option;
 
-        button.onclick = function() {
+            button.addEventListener(
+                "click",
+                function() {
 
-            checkAnswer(index, button);
+                    checkAnswer(
+                        index,
+                        button
+                    );
 
-        };
+                }
+            );
 
-        answersBox.appendChild(button);
+            answersBox.appendChild(button);
 
-    });
+        }
+    );
 
 }
 
 
-/* =====================================
+/* =========================================
    CHECK ANSWER
-===================================== */
+========================================= */
 
-function checkAnswer(selected, selectedButton) {
+function checkAnswer(
+    selectedAnswer,
+    selectedButton
+) {
 
     if (answered) {
         return;
@@ -197,31 +248,30 @@ function checkAnswer(selected, selectedButton) {
 
     answered = true;
 
-    const correct =
+    const correctAnswer =
         questions[currentQuestion].answer;
 
-    const allAnswers =
+    const allButtons =
         document.querySelectorAll(".answer");
 
 
-    /* Lock all buttons */
+    allButtons.forEach(
+        function(button) {
 
-    allAnswers.forEach(function(button) {
+            button.disabled = true;
 
-        button.disabled = true;
+        }
+    );
 
-    });
 
-
-    /* Highlight correct answer */
-
-    allAnswers[correct]
+    allButtons[correctAnswer]
         .classList.add("correct");
 
 
-    /* Correct */
-
-    if (selected === correct) {
+    if (
+        selectedAnswer ===
+        correctAnswer
+    ) {
 
         score++;
 
@@ -232,8 +282,6 @@ function checkAnswer(selected, selectedButton) {
             "✓ CORRECT! AURA +1 🔥";
 
     }
-
-    /* Wrong */
 
     else {
 
@@ -248,7 +296,6 @@ function checkAnswer(selected, selectedButton) {
 
     scoreDisplay.textContent =
         "SCORE: " + score;
-
 
     nextButton.style.display =
         "inline-block";
@@ -267,33 +314,38 @@ function checkAnswer(selected, selectedButton) {
 }
 
 
-/* =====================================
+/* =========================================
    NEXT QUESTION
-===================================== */
+========================================= */
 
-function nextQuestion() {
+nextButton.addEventListener(
+    "click",
+    function() {
 
-    currentQuestion++;
+        currentQuestion++;
 
-    if (
-        currentQuestion <
-        questions.length
-    ) {
+        if (
+            currentQuestion <
+            questions.length
+        ) {
 
-        loadQuestion();
+            loadQuestion();
 
-    } else {
+        }
 
-        finishQuiz();
+        else {
+
+            finishQuiz();
+
+        }
 
     }
+);
 
-}
 
-
-/* =====================================
+/* =========================================
    FINISH QUIZ
-===================================== */
+========================================= */
 
 function finishQuiz() {
 
@@ -328,9 +380,9 @@ function finishQuiz() {
 }
 
 
-/* =====================================
+/* =========================================
    REWARD SYSTEM
-===================================== */
+========================================= */
 
 function giveReward() {
 
@@ -339,47 +391,51 @@ function giveReward() {
     let text;
 
 
-    if (score === 7) {
+    if (score === 10) {
 
         icon = "👑";
 
-        title = "NEURO MASTER";
+        title =
+            "NEURO MASTER";
 
         text =
-            "PERFECT SCORE. Your Control & Coordination knowledge is elite.";
+            "PERFECT SCORE! Your Control & Coordination knowledge is elite.";
 
     }
 
-    else if (score === 6) {
+    else if (score >= 8) {
 
         icon = "⚡";
 
-        title = "BRAIN COMMANDER";
+        title =
+            "BRAIN COMMANDER";
 
         text =
-            "Almost perfect! Your neural knowledge is extremely strong.";
+            "Outstanding performance! Your Biology knowledge is extremely strong.";
 
     }
 
-    else if (score >= 4) {
+    else if (score >= 6) {
 
         icon = "🧠";
 
-        title = "NEURAL PRO";
+        title =
+            "NEURAL PRO";
 
         text =
             "Great work! You have a strong understanding of the chapter.";
 
     }
 
-    else if (score >= 2) {
+    else if (score >= 4) {
 
         icon = "🔬";
 
-        title = "BIO EXPLORER";
+        title =
+            "BIO EXPLORER";
 
         text =
-            "Good beginning! Revise once more and increase your Aura.";
+            "Good beginning! Revise the chapter once more and level up.";
 
     }
 
@@ -387,7 +443,8 @@ function giveReward() {
 
         icon = "🚀";
 
-        title = "SYSTEM INITIATED";
+        title =
+            "SYSTEM INITIATED";
 
         text =
             "Your mission has begun. Revise the chapter and try again.";
@@ -414,20 +471,23 @@ function giveReward() {
         "block";
 
 
-    setTimeout(function() {
+    setTimeout(
+        function() {
 
-        rewardCard.scrollIntoView({
-            behavior: "smooth",
-            block: "center"
-        });
+            rewardCard.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
 
-    }, 300);
+        },
+        300
+    );
 
 }
 
 
-/* =====================================
-   START
-===================================== */
+/* =========================================
+   START QUIZ
+========================================= */
 
 loadQuestion();
