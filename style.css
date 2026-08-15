@@ -946,3 +946,107 @@ h2 span {
     line-height: 1.6;
 }
 
+/* =====================================================
+   QUIZ
+===================================================== */
+
+.quiz-section {
+    min-height: 700px;
+}
+
+.quiz-box {
+    max-width: 850px;
+    margin: 50px auto 0;
+    padding: 40px;
+    border: 1px solid rgba(0,234,255,.25);
+    border-radius: 25px;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(0,234,255,.08), transparent 40%),
+        rgba(255,255,255,.035);
+    box-shadow: 0 30px 80px rgba(0,0,0,.35);
+}
+
+.quiz-top {
+    display: flex;
+    justify-content: space-between;
+    color: var(--cyan);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#question {
+    margin: 40px 0 25px;
+    font-size: 25px;
+    line-height: 1.4;
+}
+
+#answers {
+    display: grid;
+    gap: 12px;
+}
+
+#answers button {
+    width: 100%;
+    padding: 16px;
+    text-align: left;
+    color: white;
+    background: rgba(255,255,255,.04);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .25s;
+}
+
+#answers button:hover {
+    border-color: var(--cyan);
+    background: rgba(0,234,255,.08);
+    transform: translateX(5px);
+}
+
+#answers button.correct {
+    border-color: var(--green);
+    background: rgba(53,255,155,.12);
+}
+
+#answers button.wrong {
+    border-color: #ff4d6d;
+    background: rgba(255,77,109,.1);
+}
+
+#quiz-message {
+    min-height: 30px;
+    margin: 20px 0;
+    color: var(--cyan);
+    font-weight: bold;
+}
+
+#next-button {
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    background: var(--cyan);
+    color: #001014;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#next-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(0,234,255,.5);
+}
+
+#final-result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#reward-card {
+    display: none;
+    margin-top: 30px;
+    padding: 35px;
+    text-align: center;
+    border: 1px solid var(--cyan);
+    border-radius: 20
