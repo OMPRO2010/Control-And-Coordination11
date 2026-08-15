@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>NEUROX — Control & Coordination</title>
+    <title>NEUROX | Control & Coordination</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,250 +13,199 @@
 
 <!-- ================= NAVBAR ================= -->
 
-<header class="navbar">
-
+<nav>
     <div class="logo">
         NEURO<span>X</span>
     </div>
 
-    <nav>
-        <a href="#home">HOME</a>
-        <a href="#brain">BRAIN</a>
-        <a href="#neuron">NEURON</a>
-        <a href="#reflex">REFLEX</a>
-        <a href="#hormones">HORMONES</a>
-        <a href="#plants">PLANTS</a>
-        <a href="#quiz">QUIZ</a>
-    </nav>
-
-</header>
+    <ul>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#brain">BRAIN</a></li>
+        <li><a href="#neuron">NEURON</a></li>
+        <li><a href="#reflex">REFLEX</a></li>
+        <li><a href="#quiz">QUIZ</a></li>
+    </ul>
+</nav>
 
 
 <!-- ================= HERO ================= -->
 
-<section id="home" class="hero">
+<section class="hero" id="home">
+
+    <!-- LEFT NEURON -->
+    <div class="side-neuron left-neuron">
+
+        <svg viewBox="0 0 300 300">
+
+            <g class="neuron-glow">
+
+                <circle cx="150" cy="150" r="32"/>
+
+                <path d="M150 118 L150 45"/>
+                <path d="M150 182 L150 255"/>
+
+                <path d="M120 140 L45 80"/>
+                <path d="M120 160 L40 215"/>
+
+                <path d="M180 140 L255 80"/>
+                <path d="M180 160 L260 215"/>
+
+                <path d="M150 45 L120 20"/>
+                <path d="M150 45 L180 20"/>
+
+                <path d="M45 80 L20 65"/>
+                <path d="M45 80 L25 105"/>
+
+                <path d="M255 80 L280 65"/>
+                <path d="M255 80 L275 105"/>
+
+                <path d="M40 215 L20 240"/>
+                <path d="M40 215 L65 235"/>
+
+                <path d="M260 215 L280 240"/>
+                <path d="M260 215 L235 235"/>
+
+            </g>
+
+        </svg>
+
+    </div>
+
+
+    <!-- CENTER HEADING -->
 
     <div class="hero-content">
 
-        <p class="tag">
-            CLASS 10 • SCIENCE • BIOLOGY
-        </p>
+        <small>CLASS 10 • SCIENCE</small>
 
         <h1>
             CONTROL
-            <br>
-            <span>& COORDINATION</span>
+            <span>&</span>
+            COORDINATION
         </h1>
 
-        <p class="hero-description">
-            Enter the human body's control system.
-            Explore the brain, neurons, reflex actions,
-            hormones and plant responses.
+        <p>
+            Explore how the nervous system and hormones
+            control and coordinate activities in living organisms.
         </p>
 
-        <div class="hero-buttons">
-
-            <a href="#brain" class="primary-btn">
-                ENTER THE SYSTEM →
-            </a>
-
-            <a href="#quiz" class="secondary-btn">
-                TAKE QUIZ
-            </a>
-
-        </div>
+        <a href="#brain" class="neuro-button">
+            ENTER NEUROX →
+        </a>
 
     </div>
 
 
-    <!-- 3D BRAIN -->
+    <!-- RIGHT NEURON -->
 
-    <div class="three-d-brain">
+    <div class="side-neuron right-neuron">
 
-        <div class="brain-core">
+        <svg viewBox="0 0 300 300">
 
-            <div class="brain-half left-brain">
-                🧠
-            </div>
+            <g class="neuron-glow">
 
-            <div class="brain-half right-brain">
-                🧠
-            </div>
+                <circle cx="150" cy="150" r="32"/>
 
-        </div>
+                <path d="M150 118 L150 45"/>
+                <path d="M150 182 L150 255"/>
 
-        <div class="brain-ring ring-one"></div>
-        <div class="brain-ring ring-two"></div>
-        <div class="brain-ring ring-three"></div>
+                <path d="M120 140 L45 80"/>
+                <path d="M120 160 L40 215"/>
 
-        <div class="particle p1"></div>
-        <div class="particle p2"></div>
-        <div class="particle p3"></div>
-        <div class="particle p4"></div>
+                <path d="M180 140 L255 80"/>
+                <path d="M180 160 L260 215"/>
+
+                <path d="M150 45 L120 20"/>
+                <path d="M150 45 L180 20"/>
+
+                <path d="M45 80 L20 65"/>
+                <path d="M45 80 L25 105"/>
+
+                <path d="M255 80 L280 65"/>
+                <path d="M255 80 L275 105"/>
+
+                <path d="M40 215 L20 240"/>
+                <path d="M40 215 L65 235"/>
+
+                <path d="M260 215 L280 240"/>
+                <path d="M260 215 L235 235"/>
+
+            </g>
+
+        </svg>
 
     </div>
 
 </section>
 
 
-<!-- ================= INTRO ================= -->
+<!-- ================= BRAIN ================= -->
 
-<section class="section">
+<section id="brain">
 
-    <p class="section-tag">
-        01 / THE BIG IDEA
-    </p>
-
-    <h2>
-        DETECT.
-        <span>PROCESS.</span>
-        RESPOND.
-    </h2>
-
-    <p class="intro">
-        Control and coordination helps organisms detect
-        changes in their surroundings, process information
-        and produce suitable responses.
-    </p>
-
-
-    <div class="cards">
-
-        <div class="card">
-
-            <div class="icon">👁️</div>
-
-            <small>01</small>
-
-            <h3>
-                DETECT
-            </h3>
-
-            <p>
-                Receptors detect changes such as light,
-                heat, sound, pressure and touch.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="icon">🧠</div>
-
-            <small>02</small>
-
-            <h3>
-                PROCESS
-            </h3>
-
-            <p>
-                The nervous system receives and processes
-                information.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="icon">💪</div>
-
-            <small>03</small>
-
-            <h3>
-                RESPOND
-            </h3>
-
-            <p>
-                Muscles or glands carry out the appropriate
-                response.
-            </p>
-
-        </div>
-
+    <div class="section-label">
+        NEURAL CORE
     </div>
 
-</section>
+    <h2>THE HUMAN BRAIN</h2>
 
+    <p class="section-description">
+        The brain is the main coordinating centre of the nervous
+        system. It receives information, processes it and sends
+        instructions to different parts of the body.
+    </p>
 
-<!-- ================= 3D BRAIN ================= -->
+    <div class="brain-stage">
 
-<section id="brain" class="section brain-section">
+        <div class="brain-orbit orbit-one"></div>
+        <div class="brain-orbit orbit-two"></div>
 
-    <div class="brain-info">
+        <div class="brain">
 
-        <p class="section-tag">
-            02 / COMMAND CENTRE
-        </p>
+            <div class="brain-half left-half"></div>
+            <div class="brain-half right-half"></div>
 
-        <h2>
-            THE
-            <span>BRAIN.</span>
-        </h2>
+            <div class="brain-line line-one"></div>
+            <div class="brain-line line-two"></div>
+            <div class="brain-line line-three"></div>
+            <div class="brain-line line-four"></div>
 
-        <p class="intro">
-            The brain is the main coordinating centre
-            of the nervous system. It receives information,
-            interprets it and controls responses.
-        </p>
+        </div>
 
-
-        <div class="brain-parts">
-
-            <div>
-                <strong>FOREBRAIN</strong>
-                <p>
-                    Thinking, memory, intelligence and
-                    interpretation of sensory information.
-                </p>
-            </div>
-
-            <div>
-                <strong>MIDBRAIN</strong>
-                <p>
-                    Helps coordinate certain visual
-                    and auditory responses.
-                </p>
-            </div>
-
-            <div>
-                <strong>HIND BRAIN</strong>
-                <p>
-                    Helps control balance, posture and
-                    important involuntary activities.
-                </p>
-            </div>
-
+        <div class="brain-label">
+            🧠 NEURAL COMMAND CENTRE
         </div>
 
     </div>
 
 
-    <!-- 3D BRAIN DISPLAY -->
+    <div class="card-grid">
 
-    <div class="model-box">
-
-        <div class="model-title">
-            3D NEURAL SCAN
+        <div class="card">
+            <div class="card-icon">🧠</div>
+            <h3>Cerebrum</h3>
+            <p>
+                Controls thinking, memory, intelligence,
+                reasoning and voluntary actions.
+            </p>
         </div>
 
-        <div class="brain-3d">
-
-            <div class="brain-surface">
-                🧠
-            </div>
-
-            <div class="scan-line"></div>
-
-            <div class="brain-point point-one"></div>
-            <div class="brain-point point-two"></div>
-            <div class="brain-point point-three"></div>
-
+        <div class="card">
+            <div class="card-icon">⚖️</div>
+            <h3>Cerebellum</h3>
+            <p>
+                Helps maintain balance, posture and
+                coordination of muscular movements.
+            </p>
         </div>
 
-        <div class="model-status">
-            ● SYSTEM ONLINE
+        <div class="card">
+            <div class="card-icon">⚡</div>
+            <h3>Medulla</h3>
+            <p>
+                Controls involuntary activities such as
+                breathing and heartbeat.
+            </p>
         </div>
 
     </div>
@@ -266,130 +215,79 @@
 
 <!-- ================= NEURON ================= -->
 
-<section id="neuron" class="section">
+<section id="neuron">
 
-    <p class="section-tag">
-        03 / NEURAL NETWORK
+    <div class="section-label">
+        SIGNAL UNIT
+    </div>
+
+    <h2>THE NEURON</h2>
+
+    <p class="section-description">
+        A neuron is the structural and functional unit
+        of the nervous system.
     </p>
 
-    <h2>
-        MEET THE
-        <span>NEURON.</span>
-    </h2>
+    <div class="neuron-section">
 
-    <p class="intro">
-        Neurons are specialised cells that transmit
-        electrical impulses through the nervous system.
-    </p>
+        <div class="large-neuron">
 
+            <svg viewBox="0 0 400 400">
 
-    <div class="neuron-layout">
+                <g class="neuron-glow">
 
+                    <circle cx="200" cy="200" r="45"/>
 
-        <!-- 3D NEURON -->
+                    <path d="M160 175 L65 90"/>
+                    <path d="M160 200 L40 200"/>
+                    <path d="M160 225 L65 310"/>
 
-        <div class="model-box neuron-model">
+                    <path d="M200 155 L200 45"/>
+                    <path d="M200 245 L200 355"/>
 
-            <div class="model-title">
-                3D NEURON
-            </div>
+                    <path d="M240 190 L340 120"/>
+                    <path d="M240 210 L350 280"/>
 
-            <div class="neuron-3d">
+                    <path d="M65 90 L25 65"/>
+                    <path d="M65 90 L35 120"/>
 
-                <div class="cell-body">
-                    <span>●</span>
-                </div>
+                    <path d="M40 200 L15 175"/>
+                    <path d="M40 200 L15 225"/>
 
-                <div class="dendrite d1"></div>
-                <div class="dendrite d2"></div>
-                <div class="dendrite d3"></div>
-                <div class="dendrite d4"></div>
+                    <path d="M65 310 L30 335"/>
+                    <path d="M65 310 L90 345"/>
 
-                <div class="axon"></div>
+                </g>
 
-                <div class="axon-end end1"></div>
-                <div class="axon-end end2"></div>
-                <div class="axon-end end3"></div>
-
-                <div class="signal s1"></div>
-                <div class="signal s2"></div>
-                <div class="signal s3"></div>
-
-            </div>
-
-            <div class="model-status">
-                ⚡ SIGNAL TRANSMISSION
-            </div>
+            </svg>
 
         </div>
-
-
-        <!-- NEURON INFORMATION -->
 
         <div class="neuron-info">
 
-            <div class="info-card">
+            <span>NEURAL SIGNAL</span>
 
-                <span>01</span>
+            <h3>HOW A NEURON WORKS</h3>
 
-                <h3>
-                    DENDRITES
-                </h3>
+            <p>
+                <strong>Dendrites:</strong>
+                Receive information from receptors or other neurons.
+            </p>
 
-                <p>
-                    Receive signals from receptors
-                    or other neurons.
-                </p>
+            <p>
+                <strong>Cell body:</strong>
+                Processes information received by the neuron.
+            </p>
 
-            </div>
+            <p>
+                <strong>Axon:</strong>
+                Carries the nerve impulse towards the nerve ending.
+            </p>
 
-
-            <div class="info-card">
-
-                <span>02</span>
-
-                <h3>
-                    CELL BODY
-                </h3>
-
-                <p>
-                    Contains the nucleus and coordinates
-                    the activities of the neuron.
-                </p>
-
-            </div>
-
-
-            <div class="info-card">
-
-                <span>03</span>
-
-                <h3>
-                    AXON
-                </h3>
-
-                <p>
-                    Carries nerve impulses away from
-                    the cell body.
-                </p>
-
-            </div>
-
-
-            <div class="info-card">
-
-                <span>04</span>
-
-                <h3>
-                    NERVE ENDINGS
-                </h3>
-
-                <p>
-                    Help transmit signals to the next
-                    neuron or effector.
-                </p>
-
-            </div>
+            <p>
+                <strong>Synapse:</strong>
+                Allows the signal to pass to another neuron.
+            </p>
 
         </div>
 
@@ -398,175 +296,59 @@
 </section>
 
 
-<!-- ================= SYNAPSE ================= -->
+<!-- ================= REFLEX ARC ================= -->
 
-<section class="section">
+<section id="reflex">
 
-    <p class="section-tag">
-        04 / NEURAL CONNECTION
-    </p>
-
-    <h2>
-        THE
-        <span>SYNAPSE.</span>
-    </h2>
-
-    <p class="intro">
-        A synapse is the junction between two neurons.
-        Chemical messengers help pass the signal across
-        the tiny gap.
-    </p>
-
-
-    <div class="synapse-visual">
-
-        <div class="synapse-neuron">
-            NEURON
-        </div>
-
-        <div class="synapse-gap">
-
-            <span>⚡</span>
-            <span>⚡</span>
-            <span>⚡</span>
-
-        </div>
-
-        <div class="synapse-neuron">
-            NEURON
-        </div>
-
+    <div class="section-label">
+        RAPID RESPONSE
     </div>
 
-</section>
+    <h2>REFLEX ACTION</h2>
 
-
-<!-- ================= REFLEX ================= -->
-
-<section id="reflex" class="section">
-
-    <p class="section-tag">
-        05 / RAPID RESPONSE
+    <p class="section-description">
+        A reflex action is a quick and automatic response
+        to a stimulus.
     </p>
 
-    <h2>
-        REFLEX
-        <span>ACTION.</span>
-    </h2>
+    <div class="reflex-box">
 
-    <p class="intro">
-        A reflex action is a rapid, automatic and
-        involuntary response to a stimulus.
-    </p>
-
-
-    <div class="reflex-3d">
-
-        <div class="reflex-node stimulus-node">
-            🔥
-            <small>STIMULUS</small>
+        <div class="reflex-step">
+            <div class="reflex-icon">🔥</div>
+            <h3>Stimulus</h3>
+            <p>A change is detected by a receptor.</p>
         </div>
 
-        <div class="reflex-arrow">→</div>
+        <div class="arrow">→</div>
 
-        <div class="reflex-node">
-            👁️
-            <small>RECEPTOR</small>
+        <div class="reflex-step">
+            <div class="reflex-icon">🧬</div>
+            <h3>Sensory Neuron</h3>
+            <p>Carries the impulse towards the spinal cord.</p>
         </div>
 
-        <div class="reflex-arrow">→</div>
+        <div class="arrow">→</div>
 
-        <div class="reflex-node">
-            ⚡
-            <small>SENSORY NEURON</small>
+        <div class="reflex-step">
+            <div class="reflex-icon">🧠</div>
+            <h3>Spinal Cord</h3>
+            <p>Coordinates the rapid response.</p>
         </div>
 
-        <div class="reflex-arrow">→</div>
+        <div class="arrow">→</div>
 
-        <div class="reflex-node brain-node">
-            🧠
-            <small>SPINAL CORD</small>
+        <div class="reflex-step">
+            <div class="reflex-icon">⚡</div>
+            <h3>Motor Neuron</h3>
+            <p>Carries instructions to the effector.</p>
         </div>
 
-        <div class="reflex-arrow">→</div>
+        <div class="arrow">→</div>
 
-        <div class="reflex-node">
-            ⚡
-            <small>MOTOR NEURON</small>
-        </div>
-
-        <div class="reflex-arrow">→</div>
-
-        <div class="reflex-node">
-            💪
-            <small>EFFECTOR</small>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= REFLEX EXPLANATION ================= -->
-
-<section class="section">
-
-    <p class="section-tag">
-        06 / WHY IS IT FAST?
-    </p>
-
-    <h2>
-        PROTECTION
-        <span>FIRST.</span>
-    </h2>
-
-    <div class="cards">
-
-        <div class="card">
-
-            <div class="icon">⚡</div>
-
-            <h3>
-                RAPID
-            </h3>
-
-            <p>
-                Reflex pathways help the body respond
-                quickly to potentially harmful stimuli.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="icon">🛡️</div>
-
-            <h3>
-                AUTOMATIC
-            </h3>
-
-            <p>
-                The response occurs without requiring
-                conscious decision-making first.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="icon">🧠</div>
-
-            <h3>
-                COORDINATED
-            </h3>
-
-            <p>
-                Sensory and motor neurons work together
-                through the reflex arc.
-            </p>
-
+        <div class="reflex-step">
+            <div class="reflex-icon">✋</div>
+            <h3>Response</h3>
+            <p>The body reacts quickly.</p>
         </div>
 
     </div>
@@ -576,361 +358,42 @@
 
 <!-- ================= HORMONES ================= -->
 
-<section id="hormones" class="section">
+<section>
 
-    <p class="section-tag">
-        07 / HORMONAL CONTROL
-    </p>
+    <div class="section-label">
+        CHEMICAL CONTROL
+    </div>
 
-    <h2>
-        CHEMICAL
-        <span>MESSENGERS.</span>
-    </h2>
+    <h2>HORMONAL COORDINATION</h2>
 
-    <p class="intro">
+    <p class="section-description">
         Hormones are chemical messengers produced by
-        endocrine glands and transported through blood.
+        endocrine glands and transported through the blood.
     </p>
 
-
-    <div class="hormone-cards">
-
-        <div class="hormone-card">
-
-            <div class="hormone-orb">
-                ⚡
-            </div>
-
-            <h3>
-                ADRENALINE
-            </h3>
-
-            <p>
-                Helps prepare the body for rapid action
-                during stressful situations.
-            </p>
-
-        </div>
-
-
-        <div class="hormone-card">
-
-            <div class="hormone-orb">
-                🦋
-            </div>
-
-            <h3>
-                THYROXINE
-            </h3>
-
-            <p>
-                Helps regulate metabolism and requires
-                iodine for its production.
-            </p>
-
-        </div>
-
-
-        <div class="hormone-card">
-
-            <div class="hormone-orb">
-                🍬
-            </div>
-
-            <h3>
-                INSULIN
-            </h3>
-
-            <p>
-                Helps regulate the glucose level
-                in the blood.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= PLANTS ================= -->
-
-<section id="plants" class="section plant-section">
-
-    <p class="section-tag">
-        08 / PLANT COORDINATION
-    </p>
-
-    <h2>
-        PLANTS
-        <span>RESPOND TOO.</span>
-    </h2>
-
-    <p class="intro">
-        Plants coordinate their responses using hormones
-        and growth movements called tropisms.
-    </p>
-
-
-    <div class="plant-3d-container">
-
-        <div class="plant-3d">
-
-            <div class="plant-stem"></div>
-
-            <div class="leaf leaf-one">🌿</div>
-            <div class="leaf leaf-two">🌿</div>
-            <div class="leaf leaf-three">🌿</div>
-
-            <div class="plant-flower">
-                🌸
-            </div>
-
-            <div class="plant-roots">
-                ╱│╲
-                ╱│╲
-            </div>
-
-        </div>
-
-        <div class="sun">
-            ☀️
-        </div>
-
-    </div>
-
-
-    <div class="plant-cards">
-
-        <div>
-            ☀️
-            <h3>
-                PHOTOTROPISM
-            </h3>
-            <p>
-                Growth response to light.
-            </p>
-        </div>
-
-        <div>
-            🌍
-            <h3>
-                GEOTROPISM
-            </h3>
-            <p>
-                Growth response to gravity.
-            </p>
-        </div>
-
-        <div>
-            💧
-            <h3>
-                HYDROTROPISM
-            </h3>
-            <p>
-                Growth response to water.
-            </p>
-        </div>
-
-        <div>
-            🧪
-            <h3>
-                CHEMOTROPISM
-            </h3>
-            <p>
-                Growth response to chemicals.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= PLANT HORMONES ================= -->
-
-<section class="section">
-
-    <p class="section-tag">
-        09 / PLANT HORMONES
-    </p>
-
-    <h2>
-        GROWTH
-        <span>SIGNALS.</span>
-    </h2>
-
-
-    <div class="cards">
+    <div class="card-grid">
 
         <div class="card">
-
-            <div class="icon">
-                🌱
-            </div>
-
-            <h3>
-                AUXIN
-            </h3>
-
+            <div class="card-icon">🩸</div>
+            <h3>Insulin</h3>
             <p>
-                Promotes cell growth and helps coordinate
-                responses such as bending towards light.
+                Helps regulate the level of glucose in the blood.
             </p>
-
         </div>
-
 
         <div class="card">
-
-            <div class="icon">
-                🍎
-            </div>
-
-            <h3>
-                ETHYLENE
-            </h3>
-
+            <div class="card-icon">⚡</div>
+            <h3>Adrenaline</h3>
             <p>
-                Plays an important role in processes
-                including fruit ripening.
+                Prepares the body for emergency situations.
             </p>
-
         </div>
-
 
         <div class="card">
-
-            <div class="icon">
-                🌿
-            </div>
-
-            <h3>
-                GIBBERELLINS
-            </h3>
-
+            <div class="card-icon">🌱</div>
+            <h3>Auxin</h3>
             <p>
-                Promote plant growth and can contribute
-                to stem elongation.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= COMPARISON ================= -->
-
-<section class="section">
-
-    <p class="section-tag">
-        10 / QUICK COMPARISON
-    </p>
-
-    <h2>
-        NERVOUS
-        <span>VS</span>
-        HORMONAL.
-    </h2>
-
-
-    <div class="comparison">
-
-        <div>
-
-            <div class="comparison-icon">
-                ⚡
-            </div>
-
-            <h3>
-                NERVOUS CONTROL
-            </h3>
-
-            <p>
-                Uses electrical impulses through neurons.
-            </p>
-
-            <strong>
-                FAST • PRECISE
-            </strong>
-
-        </div>
-
-
-        <div>
-
-            <div class="comparison-icon">
-                🧪
-            </div>
-
-            <h3>
-                HORMONAL CONTROL
-            </h3>
-
-            <p>
-                Uses hormones transported through blood.
-            </p>
-
-            <strong>
-                SLOWER • LONGER-LASTING
-            </strong>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= EXAM BOOSTER ================= -->
-
-<section class="section">
-
-    <p class="section-tag">
-        11 / EXAM BOOSTER
-    </p>
-
-    <h2>
-        MASTER THE
-        <span>CHAPTER.</span>
-    </h2>
-
-
-    <div class="exam-grid">
-
-        <div>
-            <span>01</span>
-            <h3>Neuron</h3>
-            <p>
-                Structural and functional unit of the
-                nervous system.
-            </p>
-        </div>
-
-        <div>
-            <span>02</span>
-            <h3>Synapse</h3>
-            <p>
-                Junction between two neurons.
-            </p>
-        </div>
-
-        <div>
-            <span>03</span>
-            <h3>Reflex Arc</h3>
-            <p>
-                Pathway followed during a reflex action.
-            </p>
-        </div>
-
-        <div>
-            <span>04</span>
-            <h3>Hormones</h3>
-            <p>
-                Chemical messengers produced by
-                endocrine glands.
+                A plant hormone involved in growth and phototropism.
             </p>
         </div>
 
@@ -941,75 +404,57 @@
 
 <!-- ================= QUIZ ================= -->
 
-<section id="quiz" class="section quiz-section">
+<section id="quiz">
 
-    <p class="section-tag">
-        12 / FINAL MISSION
+    <div class="section-label">
+        KNOWLEDGE TEST
+    </div>
+
+    <h2>TEST YOUR AURA 🧠</h2>
+
+    <p class="section-description">
+        Complete the neural challenge and unlock your reward.
     </p>
-
-    <h2>
-        TEST YOUR
-        <span>AURA.</span>
-    </h2>
-
-    <p class="intro">
-        Complete the quiz and unlock your Biology reward.
-    </p>
-
 
     <div class="quiz-box">
 
-        <div class="quiz-top">
-
-            <span id="question-number">
-                QUESTION 1 / 10
-            </span>
-
-            <span id="score">
-                SCORE: 0
-            </span>
-
+        <div id="question-number">
+            QUESTION 1 / 10
         </div>
-
 
         <h3 id="question">
             Loading question...
         </h3>
 
-
         <div id="answers"></div>
 
+        <div id="quiz-message"></div>
 
-        <p id="quiz-message"></p>
-
-
-        <button id="next-button">
+        <button id="next-button" class="neuro-button">
             NEXT QUESTION →
         </button>
 
-
-        <div id="final-result"></div>
-
+        <div id="score">
+            SCORE: 0
+        </div>
 
         <div id="reward-card">
 
-            <div id="reward-icon">
-                🏆
-            </div>
-
-            <small>
-                AURA REWARD UNLOCKED
-            </small>
-
             <h3 id="reward-title">
-                NEURO MASTER
+                🧠 NEURAL MASTER
             </h3>
 
-            <p id="reward-text"></p>
+            <p id="reward-text">
+                Excellent work!
+            </p>
 
-            <strong id="reward-score"></strong>
+            <div id="reward-score">
+                FINAL SCORE: 0 / 10
+            </div>
 
         </div>
+
+        <div id="final-result"></div>
 
     </div>
 
@@ -1020,16 +465,20 @@
 
 <footer>
 
-    <div class="logo">
+    <div class="footer-logo">
         NEURO<span>X</span>
     </div>
 
-    <p>
+    <div class="footer-title">
         CONTROL & COORDINATION
-    </p>
+    </div>
+
+    <div class="footer-class">
+        CLASS 10 • SCIENCE
+    </div>
 
     <p>
-        CLASS 10 • SCIENCE
+        Explore • Learn • Challenge • Master
     </p>
 
 </footer>
@@ -1038,5 +487,4 @@
 <script src="script.js"></script>
 
 </body>
-
 </html>
